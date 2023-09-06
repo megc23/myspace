@@ -1,0 +1,986 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+font-family: 'Handlee', cursive;
+font-family: 'Playfair Display', serif;
+  background-color: #dda0dd;
+  font-size: 8pt;
+  margin: 0;
+}
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:link {
+  color: #003399;
+}
+
+a:visited {
+  color: #003399;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #cc0000;
+}
+
+h2 {
+  font-size: 9pt;
+  margin: 0;
+  font-weight: bold;
+}
+
+p {
+  line-height: 1.3;
+}
+
+/*
+========================================
+Master Container
+========================================
+*/
+.master-container {
+  margin: auto;
+  width: 800px;
+  background-color: white;
+}
+
+/*
+========================================
+Main Header
+========================================
+*/
+.main-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 151px;
+  background-color: rgb(255, 153, 204);
+  color: white;
+}
+
+.main-header ul {
+  list-style-type: none;
+}
+
+.main-header a:link {
+  color: #ffffff;
+  font-weight: normal;
+}
+
+.main-header a:visited {
+  color: #dda0dd;
+}
+
+/*
+========================================
+Search Bar
+========================================
+*/
+.search-bar {
+  display: grid;
+  grid-template-columns: 0.25fr 1fr 0.25fr;
+}
+
+.search-bar form {
+  justify-self: center;
+  margin: 0;
+}
+
+.search-bar form [type="text"] {
+  width: 160px;
+}
+
+.search-bar form [type="radio"] {
+  margin-right: 0.33rem;
+}
+
+.search-bar ul {
+  display: flex;
+}
+
+.submit-btn {
+  margin: 8px;
+  border: 1px solid black;
+  padding: 2px 7px;
+  background-color: #dda0dd;
+  font-size: 10px;
+  border-color: #dda0dd;
+}
+
+.topnav {
+  padding: 0;
+  margin: 8px;
+}
+
+.topnav li:first-child::after {
+  content: "|";
+  margin: 0.33rem;
+}
+
+.home {
+  justify-self: start;
+}
+
+.signup {
+  justify-self: end;
+}
+
+/*
+========================================
+Navigation Bar
+========================================
+*/
+.navbar {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  background-color: rgb(102, 153, 204);
+  height: 26px;
+}
+
+.navbar ul {
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.navbar li::after {
+  content: "|";
+  margin: 0.33rem;
+  color: black;
+}
+
+.navbar li:last-child::after {
+  content: "";
+}
+
+.navbar a:hover {
+  color: #dda0dd;
+}
+
+/*
+========================================
+Page Content Container
+========================================
+*/
+.page-content-container {
+  display: grid;
+  grid-template-columns: 325px 453px;
+  grid-column-gap: 20px;
+  grid-template-areas: "sidebar main";
+}
+
+/*
+========================================
+Profile Sidebar Column
+========================================
+*/
+.profile-sidebar {
+  grid-area: sidebar;
+  margin-left: 27px;
+  width: 300px;
+}
+
+h1 {
+  font-size: 12.25pt;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 0px;
+}
+
+.profile-sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/*
+========================================
+Profile Picture Container
+========================================
+*/
+.profile-picture-container {
+  display: grid;
+  grid-template-columns: 170px 115px;
+  grid-template-rows: 176px;
+  grid-column-gap: 15px;
+  margin-bottom: 12px;
+}
+
+.profile-picture-container p {
+  margin: 0;
+}
+
+.profile-pic {
+  grid-area: 1/1;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 150px;
+}
+
+.personal-msg {
+  grid-area: 1/2;
+  margin: 0;
+}
+
+.gender-age {
+  grid-area: 1/2;
+}
+
+.gender-age li:first-child {
+  margin-top: 28px;
+}
+
+.last-login {
+  grid-area: 1/2;
+  align-self: end;
+}
+
+.last-login li:last-child {
+  margin-bottom: 15px;
+}
+
+.pics-videos {
+  grid-area: 1/1;
+  justify-self: center;
+  align-self: end;
+}
+
+/*
+========================================
+Contact Box
+========================================
+*/
+.contact-box {
+  border: 2px solid #dda0dd;
+  height: 149px;
+  width: 300px;
+  margin-bottom: 24px;
+}
+
+.contact-box h2 {
+  color: white;
+  background-color: #dda0dd;
+  height: 17px;
+  padding-left: 10px;
+}
+
+.contact-images {
+  display: grid;
+  grid-template-columns: 150px 150px;
+  margin: 0;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+/*
+========================================
+MySpace URL
+========================================
+*/
+.myspace-url-box {
+  border: 1px solid rgb(102, 153, 204);
+  height: 26px;
+  margin-bottom: 24px;
+}
+
+.myspace-url-box h3,
+.myspace-url-box p {
+  margin: 0;
+  padding: 0;
+}
+
+.myspace-url-box h3 {
+  font-size: 8pt;
+  padding-left: 2px;
+}
+
+.myspace-url-box p {
+  padding-left: 6px;
+}
+
+/*
+========================================
+Sidebar Table Class
+========================================
+*/
+.sidebar-table {
+  border: 2px solid #dda0dd;
+  display: table;
+  border-collapse: separate;
+  border-spacing: 3px;
+}
+
+.sidebar-table-h2 {
+  background-color: #dda0dd;
+  color: white;
+  text-align: left;
+  height: 17px;
+  padding-left: 15px;
+  padding-top: 2px;
+}
+
+.sidebar-table-header {
+  vertical-align: top;
+  text-align: left;
+  width: 107px;
+  background-color: #dda0dd;
+  color: #336699;
+  padding: 3px;
+  font-weight: bold;
+  font-size: 8pt;
+}
+
+.sidebar-table-data {
+  width: 184px;
+  background-color: #dda0dd;
+  padding: 3px;
+}
+
+/*
+========================================
+Interests
+========================================
+*/
+.interests p {
+  margin-top: 0;
+}
+
+.interests p:only-child,
+.interests p:last-child {
+  margin-bottom: 0;
+}
+
+.interests table {
+  margin-bottom: 13px;
+}
+
+/*
+========================================
+Details
+========================================
+*/
+.details table {
+  margin-bottom: 22px;
+}
+
+/*
+========================================
+Schools
+========================================
+*/
+.schools .sidebar-table-header {
+  width: 228px;
+  color: black;
+  font-weight: normal;
+}
+
+.schools .sidebar-table-data {
+  width: 63px;
+  text-align: center;
+  vertical-align: top;
+}
+
+.schools ul {
+  margin-bottom: 2em;
+}
+
+/*
+========================================
+Main Column
+========================================
+*/
+main {
+  grid-area: main;
+}
+
+/*
+========================================
+User Network
+========================================
+*/
+.user-network {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 433px;
+  margin: auto;
+  height: 75px;
+  border: 2px solid black;
+  margin-top: 13px;
+}
+
+.user-network h2 {
+  font-size: 12pt;
+}
+
+/*
+========================================
+Blog
+========================================
+*/
+.blog {
+  display: grid;
+  grid-auto-rows: 29px;
+  flex-direction: column;
+  margin-top: 13px;
+  margin-left: 12px;
+  margin-bottom: 16px;
+}
+
+.blog p {
+  margin-top: 3px;
+}
+
+/*
+========================================
+Blurbs
+========================================
+*/
+.main-section-header {
+  background-color: #dda0dd;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-bottom: 8px;
+}
+
+.main-section-h2 {
+  color: Black;
+  margin-left: 20px;
+}
+
+.blurbs h3 {
+  margin: 0;
+  color: #dda0dd;
+  font-size: 9pt;
+  margin-left: 15px;
+}
+
+.blurbs p:nth-of-type(5) {
+  margin-bottom: 2em;
+}
+
+.blurbs p {
+  margin: 0 10px 15px 15px;
+}
+
+.info {
+  color: green;
+  font-weight: bold;
+}
+
+/*
+========================================
+Friend Space
+========================================
+*/
+.friends header {
+  margin-bottom: 6px;
+}
+
+.friends p:nth-of-type(1) {
+  margin-top: 0;
+  margin-left: 15px;
+}
+
+.focus-highlight {
+  color: #cc0000;
+  font-weight: normal;
+  font-size: 10pt;
+}
+
+.friend-pic-container {
+  display: grid;
+  grid-template-columns: repeat(4, 109px);
+  grid-template-rows: 160px 193px;
+}
+
+.friend-pic-container figure {
+  margin: 0;
+}
+
+.friend-pic-container figcaption {
+  text-align: center;
+}
+
+.friend-pic-container img {
+  display: block;
+  margin: auto;
+}
+
+.friends-list-link {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.friends-list-link {
+  margin-top: 7px;
+  margin-right: 8px;
+  margin-bottom: 30px;
+}
+
+.friends-list-link a {
+  color: #cc0000;
+}
+
+/*
+========================================
+Comment Wall
+========================================
+*/
+.comment-wall .main-section-header {
+  margin-bottom: 3px;
+}
+
+.comment-wall .main-section-h2 {
+  margin-bottom: 0;
+}
+
+#comment-counter {
+  margin-top: 0;
+  margin-left: 15px;
+  margin-bottom: 3px;
+}
+
+.comment-wall table {
+  margin: auto;
+  margin-bottom: 5px;
+}
+
+.comment-wall th {
+  background-color: rgb(255, 153, 51);
+  width: 158px;
+  padding: 3px;
+  vertical-align: top;
+}
+
+.comment-wall td {
+  vertical-align: top;
+  background-color: rgb(249, 214, 180);
+  width: 269px;
+  padding: 3px;
+}
+
+.comment-wall figcaption,
+.comment-wall figure {
+  margin: 0;
+}
+
+.comment-wall figcaption {
+  margin-bottom: 1em;
+}
+
+.comment-wall figure {
+  margin-bottom: 49.33px;
+}
+
+.comment-wall h3 {
+  font-size: 10pt;
+  margin: 0;
+  margin-bottom: 1em;
+}
+
+.comment-wall p {
+  font-weight: normal;
+  text-align: left;
+  margin: 0;
+}
+
+#add-comment {
+  text-align: right;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+/*
+========================================
+Footer
+========================================
+*/
+footer {
+  display: grid;
+  grid-template-rows: 16px 39px;
+  background-color: #e5e5e5;
+  padding-top: 10px;
+  height: 65px;
+}
+
+footer a {
+  text-decoration: underline;
+  font-weight: normal;
+  font-size: 8pt;
+}
+
+footer ul {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer li:after {
+  content: " | ";
+  font-weight: normal;
+}
+
+#last:after {
+  content: none;
+}
+
+footer small {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+  font-size: 8pt;
+  font-weight: normal;
+}
+
+/*
+=====
+AUDIO
+=====
+*/
+
+audio {
+  width: 300px;
+  height: 30px;
+}
+audio::-webkit-media-controls,
+video::-webkit-media-controls {
+  width: inherit;
+  height: inherit;
+  position: relative;
+  direction: ltr;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+audio::-webkit-media-controls-enclosure,
+video::-webkit-media-controls-enclosure {
+  width: 100%;
+  max-width: 800px;
+  height: 30px;
+  flex-shrink: 0;
+  bottom: 0;
+  text-indent: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+video::-webkit-media-controls-enclosure {
+  padding: 0px 5px 5px 5px;
+  height: 35px;
+  flex-shrink: 0;
+}
+audio::-webkit-media-controls-panel,
+video::-webkit-media-controls-panel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* We use flex-start here to ensure that the play button is visible even
+     * if we are too small to show all controls.
+     */
+  justify-content: flex-start;
+  -webkit-user-select: none;
+  position: relative;
+  width: 100%;
+  z-index: 0;
+  overflow: hidden;
+  text-align: right;
+  bottom: auto;
+  height: 30px;
+  background-color: rgb(255, 153, 204);
+  border-radius: 5px;
+  /* The duration is also specified in MediaControlElements.cpp and LayoutTests/media/media-controls.js */
+  transition: opacity 0.3s;
+}
+video:-webkit-full-page-media {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+audio:-webkit-full-page-media,
+video:-webkit-full-page-media {
+  max-height: 100%;
+  max-width: 100%;
+}
+audio:-webkit-full-page-media::-webkit-media-controls-panel,
+video:-webkit-full-page-media::-webkit-media-controls-panel {
+  bottom: 0px;
+}
+audio::-webkit-media-controls-mute-button,
+video::-webkit-media-controls-mute-button {
+  -webkit-appearance: media-mute-button;
+  display: flex;
+  flex: none;
+  border: none;
+  box-sizing: border-box;
+  width: 35px;
+  height: 30px;
+  line-height: 30px;
+  margin: 0 6px 0 0;
+  padding: 0;
+  background-color: initial;
+  color: inherit;
+}
+audio::-webkit-media-controls-overlay-enclosure {
+  display: none;
+}
+video::-webkit-media-controls-overlay-enclosure {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1 1;
+  width: 100%;
+  max-width: 800px;
+  text-indent: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+video::-webkit-media-controls-overlay-play-button {
+  -webkit-appearance: media-overlay-play-button;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  border: none;
+  box-sizing: border-box;
+  background-color: transparent;
+  width: 80px;
+  height: 80px;
+  padding: 0;
+}
+audio::-webkit-media-controls-play-button,
+video::-webkit-media-controls-play-button {
+  -webkit-appearance: media-play-button;
+  display: flex;
+  flex: none;
+  border: none;
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  margin-left: 9px;
+  margin-right: 9px;
+  padding: 0;
+  background-color: initial;
+  color: inherit;
+}
+audio::-webkit-media-controls-timeline-container,
+video::-webkit-media-controls-timeline-container {
+  -webkit-appearance: media-controls-background;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1 1;
+  -webkit-user-select: none;
+  height: 16px;
+  min-width: 0;
+}
+audio::-webkit-media-controls-current-time-display,
+video::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display,
+video::-webkit-media-controls-time-remaining-display {
+  -webkit-appearance: media-current-time-display;
+  -webkit-user-select: none;
+  flex: none;
+  display: flex;
+  border: none;
+  cursor: default;
+  height: 30px;
+  margin: 0 9px 0 0;
+  padding: 0;
+  line-height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  font-style: normal;
+  color: white;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-decoration: none;
+}
+audio::-webkit-media-controls-timeline,
+video::-webkit-media-controls-timeline {
+  -webkit-appearance: media-slider;
+  display: flex;
+  flex: 1 1 auto;
+  height: 8px;
+  margin: 0 15px 0 0;
+  padding: 0;
+  background-color: transparent;
+  min-width: 25px;
+  border: initial;
+  color: inherit;
+}
+audio::-webkit-media-controls-volume-slider,
+video::-webkit-media-controls-volume-slider {
+  -webkit-appearance: media-volume-slider;
+  display: flex;
+  /* The 1.9 value was empirically chosen to match old-flexbox behaviour
+     * and be aesthetically pleasing.
+     */
+  flex: 1 1.9 auto;
+  height: 8px;
+  max-width: 70px;
+  margin: 0 15px 0 0;
+  padding: 0;
+  background-color: transparent;
+  min-width: 15px;
+  border: initial;
+  color: inherit;
+}
+/* FIXME these shouldn't use special pseudoShadowIds, but nicer rules.
+   https://code.google.com/p/chromium/issues/detail?id=112508
+   https://bugs.webkit.org/show_bug.cgi?id=62218
+*/
+input[type="range" i]::-webkit-media-slider-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row; /* This property is updated by C++ code. */
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  border: 1px solid rgba(230, 230, 230, 0.35);
+  border-radius: 4px;
+  background-color: transparent; /* Background drawing is managed by C++ code to draw ranges. */
+}
+/* The negative right margin causes the track to overflow its container. */
+input[type="range" i]::-webkit-media-slider-container > div {
+  margin-right: -14px;
+}
+input[type="range" i]::-webkit-media-slider-thumb {
+  margin-left: -7px;
+  margin-right: -7px;
+}
+audio::-webkit-media-controls-fullscreen-button,
+video::-webkit-media-controls-fullscreen-button {
+  -webkit-appearance: media-enter-fullscreen-button;
+  display: flex;
+  flex: none;
+  border: none;
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  margin-left: -5px;
+  margin-right: 9px;
+  padding: 0;
+  background-color: initial;
+  color: inherit;
+}
+audio::-webkit-media-controls-toggle-closed-captions-button {
+  display: none;
+}
+video::-webkit-media-controls-toggle-closed-captions-button {
+  -webkit-appearance: media-toggle-closed-captions-button;
+  display: flex;
+  flex: none;
+  border: none;
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  margin-left: -5px;
+  margin-right: 9px;
+  padding: 0;
+  background-color: initial;
+  color: inherit;
+}
+audio::-webkit-media-controls-fullscreen-volume-slider,
+video::-webkit-media-controls-fullscreen-volume-slider {
+  display: none;
+}
+audio::-webkit-media-controls-fullscreen-volume-min-button,
+video::-webkit-media-controls-fullscreen-volume-min-button {
+  display: none;
+}
+audio::-webkit-media-controls-fullscreen-volume-max-button,
+video::-webkit-media-controls-fullscreen-volume-max-button {
+  display: none;
+}
+video::-webkit-media-text-track-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 5px;
+  font: 22px sans-serif;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0;
+  text-decoration: none;
+  pointer-events: none;
+  -webkit-user-select: none;
+  word-break: break-word;
+  flex: 1 1;
+}
+video::cue {
+  display: inline;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 2px 2px;
+}
+video::-webkit-media-text-track-region {
+  position: absolute;
+  line-height: 5.33vh;
+  writing-mode: horizontal-tb;
+  background: rgba(0, 0, 0, 0.8);
+  color: rgba(255, 255, 255, 1);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  overflow: hidden;
+}
+video::-webkit-media-text-track-region-container {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  flex-direction: column;
+}
+video::-webkit-media-text-track-region-container.scrolling {
+  transition: top 433ms linear;
+}
+video::-webkit-media-text-track-display {
+  position: absolute;
+  overflow: hidden;
+  white-space: pre-wrap;
+  -webkit-box-sizing: border-box;
+  flex: 0 0 auto;
+}
+video::cue(:future) {
+  color: gray;
+}
+video::-webkit-media-text-track-container b {
+  font-weight: bold;
+}
+video::-webkit-media-text-track-container u {
+  text-decoration: underline;
+}
+video::-webkit-media-text-track-container i {
+  font-style: italic;
+}
